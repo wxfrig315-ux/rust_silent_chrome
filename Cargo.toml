@@ -1,0 +1,15 @@
+[package]
+name = "silent_chrome_rs"
+version = "0.1.0"
+edition = "2021"
+description = "Silently install a Chrome extension on Windows by patching Secure Preferences"
+
+[dependencies]
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.10"
+hmac = "0.12"
+hex = "0.4"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+
+[profile.release]
+strip = true
